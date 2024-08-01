@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днём Рождения, Катя!</title>
+    <style>
+        body {
+            background-color: #1E1E2C; /* Тёмно-синий фон */
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #7B1E1E; /* Бордовый */
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #E63946; /* Ярко-красный */
+            margin: 0;
+            font-size: 2.5em;
+            animation: fadeIn 2s ease-in;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .message {
+            background-color: #2D2D44; /* Тёмно-синий */
+            border: 2px solid #E63946; /* Ярко-красный */
+            border-radius: 15px;
+            display: inline-block;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            color: white;
+            animation: slideIn 2s ease-out;
+        }
+        .message h2 {
+            color: #E63946; /* Ярко-красный */
+        }
+        .message p {
+            color: #A8DADC; /* Светло-голубой */
+        }
+        .message img {
+            border-radius: 15px;
+            margin-top: 20px;
+            max-width: 100%;
+            animation: zoomIn 2s ease-in;
+        }
+        footer {
+            background-color: #1E1E2C; /* Тёмно-синий */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .button {
+            background-color: #E63946; /* Ярко-красный */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #7B1E1E; /* Бордовый */
+        }
+        .alert-message {
+            background-color: #2D2D44; /* Тёмно-синий */
+            border: 2px solid #E63946; /* Ярко-красный */
+            border-radius: 15px;
+            color: white;
+            padding: 10px;
+            position: absolute;
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+    <script>
+        function showAlert() {
+            const alertContainer = document.querySelector('body');
+            for (let i = 0; i < 20; i++) {
+                const alertMessage = document.createElement('div');
+                alertMessage.className = 'alert-message';
+                alertMessage.textContent = 'В этот раз я не забыл про др:)';
+                alertMessage.style.top = Math.random() * (window.innerHeight - 100) + 'px';
+                alertMessage.style.left = Math.random() * (window.innerWidth - 200) + 'px';
+                alertContainer.appendChild(alertMessage);
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1><strong><u>С Днём Рождения, Катя!</u></strong></h1>
+    </header>
+    <div class="content">
+        <div class="message">
+            <h2>Дорогая Катя!</h2>
+            <p>Поздравляю тебя с <strong>Днём Рождения</strong>! Очень надеюсь, что у тебя будет всегда всё <strong>хорошо</strong> и всегда всё будет <strong>получаться</strong>!</p>
+            <img src="https://wallpaper.forfun.com/fetch/96/96bb06a4b893d38965952c54f4ca739b.jpeg" alt="Цветы сирень">
+            <p>
+                <a href="#" class="button" onclick="showAlert()">Нажми сюда!</a>
+            </p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Made by Velnt</p>
+    </footer>
+</body>
+</html>
